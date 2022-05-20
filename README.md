@@ -1,7 +1,7 @@
 # Advanced Terraform Module
 
  * state file is managed by Terraform Cloud
- * Terraform Cloud is triggered by GitHab actions
+ * Terraform Cloud is triggered by code changes
  * Used provider is AWS
  * AWS Region: Europe (Frankfurt) eu-central-1
 
