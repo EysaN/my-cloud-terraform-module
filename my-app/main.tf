@@ -20,7 +20,7 @@ provider "aws" {
 }
 
 module "my_app_1" {
-    source = "../my-app-module"
+    source = "../module/myapp"
 
     # our variables
     app_name = "myapp1"
