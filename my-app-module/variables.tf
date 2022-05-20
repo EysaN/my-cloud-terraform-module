@@ -35,13 +35,13 @@ variable "key_name" {
 }
 
 variable "user_data" {
-    description = "the scripts executed at ec2 launch "
+    description = "the scripts executed at ec2 launch"
     type = string
     default = "echo this is the default user date > /home/ec2-user/user-data.log"
 }
 
 variable "alb_cert_arn" {
-      description = "the arn of the certificate from AWS Certificate manager"
+      description = "the arn of the certificate from Amazon Certificate manager"
       type = string
       default = "arn:aws:acm:eu-central-1:366187108546:certificate/7df202b3-a165-4f58-93f8-a935360389a6"
 }

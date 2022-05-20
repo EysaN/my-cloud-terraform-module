@@ -5,19 +5,10 @@ resource "aws_security_group" "security_group_alb_1" {
     vpc_id = data.aws_vpc.default_vpc_1.id
 }
 
-# resource "aws_security_group_rule" "inbound_security_group_rule_alb_2" {
-#     cidr_blocks = [ "0.0.0.0/0" ]
-#     from_port = 443
-#     to_port = 443
-#     protocol = "tcp"
-#     type = "ingress"
-#     security_group_id = aws_security_group.security_group_alb_1.id
-# }
-
 resource "aws_security_group_rule" "inbound_security_group_rule_alb_2" {
     cidr_blocks = [ "0.0.0.0/0" ]
-    from_port = 80
-    to_port = 80
+    from_port = 443
+    to_port = 443
     protocol = "tcp"
     type = "ingress"
     security_group_id = aws_security_group.security_group_alb_1.id

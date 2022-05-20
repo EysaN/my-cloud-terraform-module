@@ -1,4 +1,12 @@
 terraform {
+  backend "remote" {
+    organization = "eyxatech"
+
+    workspaces {
+      name = "my-cloud-terraform"
+    }
+  }
+
   required_providers {
     aws = {
       source  = "hashicorp/aws"
@@ -21,4 +29,5 @@ module "my_app_1" {
     env = "dev"
     iam_instance_profile = "AWSEC2ReadOnlyAccess"
     user_data = filebase64("${path.module}/launch_script_1.sh")
+    # for the variables which are not defined here, their default values are used
 }
