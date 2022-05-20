@@ -1,25 +1,11 @@
-# Advanced Terraform Module
+# Terraform Module Repo
 
  * state file is managed by Terraform Cloud
- * Terraform Cloud is triggered by code changes
+ * Terraform Cloud is triggered from command line
  * Used provider is AWS
  * AWS Region: Europe (Frankfurt) eu-central-1
 
-
-### Description
-Nginx application running on an EC2 instance configured by a launch template and provisioned in an ASG
-
-Simple scaling policies are created to add/remove instances by 1 capacity unit when the average CPU of the AGS exceeds/drops down 50%
-
-The ASG capacity is configured as: desired = 1, min = 1, max = 2
-
-The app runs behind an ALB and strictly though the ALB DNS name on port 443 only, where HTTP is redirected to HTTPS
-
-The ALB is linked to an alias Route53 record 
-
-ALB listener is configured by a certificate isssued from AWS Certificate Manager
  
-
 ### Variables needed for the module are
  + app_name: name of the application
  + env: the application environment (dev, test, staging, prod)
