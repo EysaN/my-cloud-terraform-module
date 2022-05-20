@@ -17,8 +17,6 @@ terraform {
 
 provider "aws" {
   region = "eu-central-1"
-  access_key = "xxxx"
-  secret_key = "xxxx"
 }
 
 module "my_app_1" {
